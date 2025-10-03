@@ -1,5 +1,3 @@
-// components/MainScreen.jsx
-
 import ImportFiles from "./ImportFiles";
 import MusicList from "./MusicList";
 
@@ -9,7 +7,7 @@ export default function MainScreen() {
       <div className="w-1/6 bg-[#212124] p-10">
         <ImportFiles />
       </div>
-      <main className="flex mt-10 w-full flex-row justify-center h-auto">
+      <main className="flex mt-10 w-full flex-row justify-center h-auto" style={{overflowY: "auto", height: "cacl(100vh - 10rem"}}>
         <MusicList />
       </main>
     </section>

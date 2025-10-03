@@ -3,7 +3,6 @@ import MainScreen from "@/components/MainScreen";
 import ModalPlayList from "@/components/ModalPlaylist";
 import Toast from "@/components/Toast";
 
-// pages/index.js
 export default function Home() {
   return (
     <main className="flex flex-col h-screen">

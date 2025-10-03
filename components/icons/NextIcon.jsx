@@ -1,5 +1,3 @@
-// components/icons/NextIcon.jsx
-
 export default function NextIcon({ onClick }) {
   return (
     <svg

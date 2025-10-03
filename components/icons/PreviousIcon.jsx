@@ -1,5 +1,3 @@
-// components/icons/PreviousIcon.jsx
-
 export default function PreviousIcon({ onClick }) {
   return (
     <svg
