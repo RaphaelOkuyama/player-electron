@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 export default function Toast() {
   const [mensagem, setMensagem] = useState("");
   useEffect(() => {
-    window.electronAPI.ReciveFromElectron("toast:recive", (event, arg) => {
+    window.electronAPI.receiveFromElectron("toast:recive", (event, arg) => {
       setMensagem(arg);
       const toast = document.getElementById("toast");
       toast.classList.add("flex");

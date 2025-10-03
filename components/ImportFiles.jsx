@@ -11,7 +11,7 @@ export default function ImportFiles() {
           data: new Uint8Array(fileData),
         };
 
-        window.electronAPI.SendToElectron("music-upload", fileObject);
+        window.electronAPI.sendToElectron("music-upload", fileObject);
       };
 
       reader.readAsArrayBuffer(file);

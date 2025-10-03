@@ -1,10 +1,16 @@
-// components/MusicInList.jsx
-
 import AdicionarIcon from "./icons/AdicionarIcon";
 import AlbumVazioIcon from "./icons/AlbumVazioIcon";
 import ExcluirIcon from "./icons/ExcluirIcon";
 
 export default function MusicInList({ music }) {
+  function handleExcluirMusica(music) {
+    window.electronAPI.sendToElectron("music-delete", music)
+  }
+
+  function handleAdicionarMusica(music) {
+    window.electronAPI.sendToElectron("music-to-play", music)
+  }
+
   return (
     <div className="m-5 p-2 flex flex-row border border-gray-500 w-full gap-2">
       <AlbumVazioIcon />
@@ -14,10 +20,10 @@ export default function MusicInList({ music }) {
           <h2 className="text-white">{music}</h2>
         </div>
         <div className="flex flex-row justify-center gap-5 h-full">
-          <AdicionarIcon />
-          <ExcluirIcon />
+          <AdicionarIcon onClick={() => handleAdicionarMusica(music)} />
+          <ExcluirIcon onClick={() => handleExcluirMusica(music)} />
         </div>
       </div>
     </div>
-  );
+  )
 }
